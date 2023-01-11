@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "908112174909",
+    "project_id": "gamehub-eb144",
+    "storage_bucket": "gamehub-eb144.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:908112174909:android:0c4b0688c833a9326f6f54",
+        "android_client_info": {
+          "package_name": "com.mariomedina.gamehub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "908112174909-6spn38kstvv7v2prafsgbko7ucafh508.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjksnAVIODDW3c0s-zf0bwUXDoca43BCY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "908112174909-6spn38kstvv7v2prafsgbko7ucafh508.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
