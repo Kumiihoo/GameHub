@@ -32,7 +32,7 @@ class LoginActivity : AppCompatActivity() {
             if (binding.userNumber.text!!.isEmpty()) {
                 binding.userNumber.error = "Por favor introduce un número"
             } else {
-                verifyOTP(binding.userNumber.text.toString())
+                sendOTP(binding.userNumber.text.toString())
             }
         }
 
@@ -40,7 +40,7 @@ class LoginActivity : AppCompatActivity() {
             if (binding.userOTP.text!!.isEmpty()) {
                 binding.userOTP.error = "Por favor introduce el Código de Seguridad"
             } else {
-                sendOTP(binding.userOTP.text.toString())
+                verifyOTP(binding.userOTP.text.toString())
             }
         }
     }
