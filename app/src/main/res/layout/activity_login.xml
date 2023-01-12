@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".auth.LoginActivity">
+    tools:context=".auth.LoginActivity"
+    android:background="@color/bg_light_grey">
 
     <ImageView
         android:id="@+id/imageView2"
@@ -20,7 +21,10 @@
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="-70dp"
         android:layout_marginHorizontal="36dp"
+        app:cardElevation="10dp"
+        android:id="@+id/numberLayout"
         app:layout_constraintTop_toBottomOf="@+id/imageView2">
 
         <LinearLayout
@@ -29,6 +33,11 @@
             android:layout_margin="12dp"
             android:orientation="vertical"
             app:layout_constraintTop_toBottomOf="@+id/imageView2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Número de Teléfono"/>
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -41,14 +50,68 @@
                     android:layout_height="wrap_content"
                     android:drawableLeft="@drawable/phone_solid"
                     android:drawablePadding="12dp"
-                    android:hint="Phone number" />
+                    android:id="@+id/userNumber"
+                    android:inputType="number"
+                    android:hint="+34 695 093 234" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <com.example.myloadingbutton.MyLoadingButton
-                android:id="@+id/my_loading_button"
+            <Button
+                android:id="@+id/sendOTP"
+                android:layout_width="match_parent"
+                android:layout_marginTop="8dp"
+                android:text="Enviar"
+                android:layout_height="45dp" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-70dp"
+        android:layout_marginHorizontal="36dp"
+        android:id="@+id/OTPLayout"
+        android:visibility="gone"
+        app:cardElevation="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2">
+
+            <TextView
+                android:id="@+id/textView1"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:text="Código de Seguridad"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/phone_solid"
+                    android:drawablePadding="12dp"
+                    android:hint="123456"
+                    android:id="@+id/userOTP"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/verifyOTP"
+                android:layout_width="match_parent"
+                android:layout_marginTop="8dp"
+                android:text="Enviar"
+                android:layout_height="45dp" />
 
         </LinearLayout>
 
