@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "908112174909",
+    "firebase_url": "https://gamehub-eb144-default-rtdb.europe-west1.firebasedatabase.app",
     "project_id": "gamehub-eb144",
     "storage_bucket": "gamehub-eb144.appspot.com"
   },
@@ -13,6 +14,14 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "908112174909-t8bkib49lpg6t58rpde2en1trafjc8p1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mariomedina.gamehub",
+            "certificate_hash": "de515ffe4db42f03af4d68e1cb8d9ee61cc63da8"
+          }
+        },
         {
           "client_id": "908112174909-6spn38kstvv7v2prafsgbko7ucafh508.apps.googleusercontent.com",
           "client_type": 3
