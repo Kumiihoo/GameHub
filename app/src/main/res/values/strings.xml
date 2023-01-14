@@ -6,6 +6,8 @@
     <string name="gaming">Gaming</string>
     <string name="message">Mensajes</string>
     <string name="profile">Perfil</string>
+    <string name="open">Abierto</string>
+    <string name="close">Cerrado</string>
 
     
 </resources>
