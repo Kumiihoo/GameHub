@@ -53,6 +53,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/imageView2">
 
                 <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/userImage"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:layout_gravity="center_horizontal"
@@ -111,7 +112,7 @@
                         android:drawableLeft="@drawable/location_dot_solid"
                         android:drawablePadding="17dp"
                         android:id="@+id/userCity"
-                        android:inputType="number"
+                        android:inputType="text"
                         android:hint="Localidad" />
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -126,7 +127,7 @@
 
                 <TextView
                     android:background="@drawable/btn_bg"
-                    android:id="@+id/sendOTP"
+                    android:id="@+id/saveData"
                     android:gravity="center"
                     android:textColor="@color/white"
                     android:layout_width="match_parent"

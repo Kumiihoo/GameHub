@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav"
+    app:startDestination="@id/gamingFragment">
+
+    <fragment
+        android:id="@+id/gamingFragment"
+        android:name="com.mariomedina.gamehub.ui.GamingFragment"
+        android:label="fragment_gaming"
+        tools:layout="@layout/fragment_gaming" />
+    <fragment
+        android:id="@+id/messageFragment"
+        android:name="com.mariomedina.gamehub.ui.MessageFragment"
+        android:label="fragment_message"
+        tools:layout="@layout/fragment_message" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.mariomedina.gamehub.ui.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+</navigation>
