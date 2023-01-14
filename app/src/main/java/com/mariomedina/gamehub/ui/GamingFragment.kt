@@ -2,23 +2,23 @@ package com.mariomedina.gamehub.ui
 
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.DefaultItemAnimator
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import com.mariomedina.gamehub.R
 import com.mariomedina.gamehub.adapter.GamingAdapter
 import com.mariomedina.gamehub.databinding.FragmentGamingBinding
 import com.mariomedina.gamehub.model.UserModel
 import com.yuyakaido.android.cardstackview.CardStackLayoutManager
 import com.yuyakaido.android.cardstackview.CardStackListener
 import com.yuyakaido.android.cardstackview.Direction
+
 
 
 class GamingFragment : Fragment() {
@@ -40,7 +40,6 @@ class GamingFragment : Fragment() {
     private fun init() {
         manager = CardStackLayoutManager(requireContext(), object : CardStackListener{
             override fun onCardDragging(direction: Direction?, ratio: Float) {
-                TODO("Not yet implemented")
             }
 
             override fun onCardSwiped(direction: Direction?) {
@@ -50,19 +49,15 @@ class GamingFragment : Fragment() {
             }
 
             override fun onCardRewound() {
-                TODO("Not yet implemented")
             }
 
             override fun onCardCanceled() {
-                TODO("Not yet implemented")
             }
 
             override fun onCardAppeared(view: View?, position: Int) {
-                TODO("Not yet implemented")
             }
 
             override fun onCardDisappeared(view: View?, position: Int) {
-                TODO("Not yet implemented")
             }
 
         })
