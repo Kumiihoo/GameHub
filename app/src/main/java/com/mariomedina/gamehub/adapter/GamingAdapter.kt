@@ -1,10 +1,12 @@
 package com.mariomedina.gamehub.adapter
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.mariomedina.gamehub.activity.MessageActivity
 import com.mariomedina.gamehub.databinding.FragmentGamingBinding
 import com.mariomedina.gamehub.databinding.ItemUserLayoutBinding
 import com.mariomedina.gamehub.model.UserModel
@@ -26,6 +28,12 @@ class GamingAdapter(val context : Context, val list: ArrayList<UserModel>) : Rec
         holder.binding.textView2.text = list[position].email
 
         Glide.with(context).load(list[position].image).into(holder.binding.userImage)
+
+        holder.binding.chat.setOnClickListener{
+            val inte = Intent(context, MessageActivity::class.java)
+            inte.putExtra("userId", list[position].number)
+            context.startActivity(inte)
+        }
 
     }
 

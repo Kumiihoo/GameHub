@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.DefaultItemAnimator
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
@@ -43,7 +44,7 @@ class GamingFragment : Fragment() {
             }
 
             override fun onCardSwiped(direction: Direction?) {
-                if (manager.topPosition == list.size){
+                if (manager.topPosition == list!!.size){
                     Toast.makeText(requireContext(), "Esta es la última tarjeta", Toast.LENGTH_SHORT).show()
                 }
             }
@@ -69,7 +70,11 @@ class GamingFragment : Fragment() {
         manager.setDirections(Direction.HORIZONTAL)
     }
 
-    private lateinit var list : ArrayList<UserModel>
+    companion object{
+        var list : ArrayList<UserModel>? = null
+
+    }
+
     private fun getData() {
         FirebaseDatabase.getInstance().getReference("users")
             .addValueEventListener(object : ValueEventListener{
@@ -82,14 +87,15 @@ class GamingFragment : Fragment() {
                         for (data in snapshot.children)
                         {
                             val model = data.getValue(UserModel::class.java)
-                            list.add(model!!)
+                            if (model!!.number != FirebaseAuth.getInstance().currentUser!!.phoneNumber)
+                                list!!.add(model)
                         }
-                        list.shuffle()
+                        list!!.shuffle()
                         init()
 
                         binding.cardStackView.layoutManager = manager
                         binding.cardStackView.itemAnimator = DefaultItemAnimator()
-                        binding.cardStackView.adapter = GamingAdapter(requireContext(), list)
+                        binding.cardStackView.adapter = GamingAdapter(requireContext(), list!!)
 
                     }else{
                         Toast.makeText(requireContext(), "Algo ha ido mal", Toast.LENGTH_SHORT).show()
