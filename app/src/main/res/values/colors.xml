@@ -10,5 +10,6 @@
     <color name="light_grey">#F1F1F1</color>
     <color name="colorPrimary">#6C63FF</color>
     <color name="colorSecondary">#9983FF</color>
+    <color name="colorForm">#A18CFD</color>
     <color name="bg_light_grey">#ECECEC</color>
 </resources>

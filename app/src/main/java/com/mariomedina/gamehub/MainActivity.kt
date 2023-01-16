@@ -1,7 +1,7 @@
 package com.mariomedina.gamehub
 
+import android.content.Intent
 import android.os.Bundle
-import android.view.Gravity
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -10,6 +10,7 @@ import androidx.core.view.GravityCompat
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.google.android.material.navigation.NavigationView
+import com.mariomedina.gamehub.activity.FormActivity
 import com.mariomedina.gamehub.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() , NavigationView.OnNavigationItemSelectedListener {
@@ -41,6 +42,7 @@ class MainActivity : AppCompatActivity() , NavigationView.OnNavigationItemSelect
             }
             R.id.developer -> {
                 Toast.makeText(this, "Desarrollador", Toast.LENGTH_SHORT).show()
+                startActivity(Intent(this, FormActivity::class.java))
             }
             R.id.favourite -> {
                 Toast.makeText(this, "Favorito", Toast.LENGTH_SHORT).show()

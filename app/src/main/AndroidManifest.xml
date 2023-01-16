@@ -13,6 +13,9 @@
         android:theme="@style/Theme.GameHub"
         tools:targetApi="31">
         <activity
+            android:name=".activity.FormActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.MessageActivity"
             android:exported="false" />
         <activity
