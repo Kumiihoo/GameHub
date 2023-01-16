@@ -61,7 +61,10 @@ class LoginActivity : AppCompatActivity() {
 
         //binding.sendOTP.showLoadingButton()
 
-        dialog.show()
+        try {
+            dialog.show()
+        } catch (e: Exception) {
+        }
 
         val credential = PhoneAuthProvider.getCredential(verificationId!!, otp)
 
@@ -142,7 +145,10 @@ class LoginActivity : AppCompatActivity() {
 
                 override fun onDataChange(p0: DataSnapshot) {
                     if(p0.exists()) {
-                        dialog.dismiss()
+                        try {
+                            dialog.dismiss()
+                        } catch (e: Exception) {
+                        }
                         startActivity(Intent(this@LoginActivity, MainActivity::class.java))
                         finish()
                     } else {
