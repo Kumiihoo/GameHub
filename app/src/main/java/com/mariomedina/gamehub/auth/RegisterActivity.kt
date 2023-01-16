@@ -1,18 +1,15 @@
 package com.mariomedina.gamehub.auth
 
-import android.app.Activity
-import android.app.Instrumentation.ActivityResult
 import android.content.Intent
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.storage.FirebaseStorage
 import com.mariomedina.gamehub.MainActivity
-import com.mariomedina.gamehub.R
 import com.mariomedina.gamehub.databinding.ActivityRegisterBinding
 import com.mariomedina.gamehub.model.UserModel
 import com.mariomedina.gamehub.utils.Config
