@@ -39,14 +39,9 @@ class FormActivity : AppCompatActivity() {
                 if (it.exists()) {
                     val dataForm = it.getValue(FormModel::class.java)
 
-                    binding.formName.setText(dataForm!!.name.toString())
+                    binding.formName.setText(dataForm!!.formName.toString())
+                    binding.formEmail.setText(dataForm.formEmail.toString())
                     binding.formNumber.setText(dataForm.formSenderId.toString())
-                    binding.formEmail.setText(dataForm.email.toString())
-                    binding.formTitle.setText(dataForm.title.toString())
-                    binding.formMessage.setText(dataForm.message.toString())
-
-                    Config.hideDialog()
-
                 }
             }
 
@@ -99,10 +94,11 @@ class FormActivity : AppCompatActivity() {
 
     private fun storeData(imageUrl: Uri?) {
         val data = FormModel(
-            name = binding.formName.text.toString(),
+            formName = binding.formName.text.toString(),
             message = binding.formMessage.text.toString(),
-            email = binding.formEmail.text.toString(),
+            formEmail = binding.formEmail.text.toString(),
             title = binding.formTitle.text.toString(),
+            snapshot = imageUrl.toString(),
             formSenderId = FirebaseAuth.getInstance().currentUser!!.phoneNumber
         )
 

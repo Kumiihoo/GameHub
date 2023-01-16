@@ -12,7 +12,6 @@
         android:background="@color/colorForm">
 
         <ImageView
-            android:id="@+id/formImage"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_centerInParent="true"
@@ -29,10 +28,8 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:enabled="false"
             android:id="@+id/formName"
-            android:hint="Nombre"
-            android:text="Pedro García" />
+            android:hint="Nombre" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -45,10 +42,8 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:enabled="false"
             android:id="@+id/formNumber"
-            android:hint="Número"
-            android:text="689393903" />
+            android:hint="Número" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -63,8 +58,7 @@
             android:layout_height="wrap_content"
             android:clickable="false"
             android:id="@+id/formEmail"
-            android:hint="Email"
-            android:text="pedrogracia@gmail.com" />
+            android:hint="Email" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -79,8 +73,7 @@
             android:id="@+id/formTitle"
             android:layout_height="wrap_content"
             android:clickable="false"
-            android:hint="Título del mensaje"
-            android:text="Escriba aquí el título del mensaje" />
+            android:hint="Asunto" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -95,22 +88,32 @@
             android:id="@+id/formMessage"
             android:layout_height="wrap_content"
             android:clickable="false"
-            android:hint="Mensaje"
-            android:text="Escriba aquí su mensaje" />
+            android:hint="Mensaje" />
     </com.google.android.material.textfield.TextInputLayout>
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_marginHorizontal="12dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
         android:layout_height="wrap_content"
         android:weightSum="2">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="85dp"
+            android:layout_marginEnd="8dp"
+            android:id="@+id/formImage"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_weight="1"
+            android:src="@drawable/gallery"/>
 
         <com.google.android.material.button.MaterialButton
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_width="350dp"
+            android:gravity="center"
+            android:layout_height="match_parent"
             android:id="@+id/formSend"
+
             android:layout_weight="1"
             android:text="Enviar"/>
 
