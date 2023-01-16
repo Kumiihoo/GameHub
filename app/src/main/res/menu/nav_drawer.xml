@@ -23,7 +23,7 @@
 
     <item android:id="@+id/developer"
         android:title="Informar de un error"
-        android:icon="@drawable/coding"/>
+        android:icon="@drawable/ladybug"/>
 
 
 </menu>
