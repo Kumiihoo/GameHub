@@ -22,7 +22,7 @@
         android:icon="@drawable/shield"/>
 
     <item android:id="@+id/developer"
-        android:title="Desarrollador"
+        android:title="Informar de un error"
         android:icon="@drawable/coding"/>
 
 

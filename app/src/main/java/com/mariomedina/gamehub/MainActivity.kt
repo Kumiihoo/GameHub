@@ -41,7 +41,6 @@ class MainActivity : AppCompatActivity() , NavigationView.OnNavigationItemSelect
                 Toast.makeText(this, "Valóranos", Toast.LENGTH_SHORT).show()
             }
             R.id.developer -> {
-                Toast.makeText(this, "Desarrollador", Toast.LENGTH_SHORT).show()
                 startActivity(Intent(this, FormActivity::class.java))
             }
             R.id.favourite -> {
